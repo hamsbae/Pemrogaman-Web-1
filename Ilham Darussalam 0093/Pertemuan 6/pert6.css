@@ -1,0 +1,45 @@
+.box{width: 100px; height: 100px;}
+.box1{width: 500px; height: 250px;}
+.border-solid{border-style: solid; border-width: 1px;}
+.border-bottom{border-bottom-style: dashed; border-bottom-width: 2px; border-bottom-color: red;}
+.border-top{border-top: 5px dotted #72eaff;}
+.bmargin-top{margin-top: 20px;}
+.bpading{padding: 5px;}
+.pstatis{position: static;}
+.prelatif{position: relative; left: 20px; top: 20px;}
+.pabsolut{position: absolute; top: 365px;}
+.pfix{position: fixed;}
+.psticky{position: sticky; bottom: 0px;}
+.akeyframep{animation-duration: 3s; animation-name: slide-in;}
+.akeyframet{animation-duration: 3s; animation-name: grow_shrink;}
+
+@keyframes slide-in
+{
+    from{color: blue;}
+    to{color: yellow;}
+}
+
+@keyframes brow-shrink
+{
+    25%,75%{scale: 100%;}
+    50%{scale: 200%; color: magenta;}
+}
+
+a
+{
+    background-color: aqua;
+    color: #fff;
+    border: 1px solid;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+a:hover,a:focus
+{
+    background-color: white;
+    color: #333;
+}
+
+.at1{rotate: 90deg; transform-origin: top; margin-top: 150px;}
+.at2{transform: skewX(10deg) translateX(150px); transform-origin: bottom left;}
