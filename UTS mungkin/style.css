@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.header, .footer {
+    margin-bottom: 20px;
+}
+        
+.menu {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.menu button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: aqua;
+}
+
+.form-container {
+    clear: both;
+    margin-top: 30px;
+    text-align: left;
+}
+
+img{
+    float: right;
+    width: 120px;
+    height: 120px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
