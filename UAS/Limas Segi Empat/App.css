@@ -1,0 +1,237 @@
+/* MultipleFiles/App.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  font-size: 16px; /* Default font size for desktop */
+}
+
+.container {
+  border: 2px solid black;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 600px; /* Default max-width for desktop */
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 100px; /* Default for desktop */
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid black;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  background: #d8e3e7;
+}
+
+h3{
+  text-align: center;
+}
+
+.judul-website {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  background: white;
+  font-size: 1.5rem; /* Default for desktop */
+}
+
+.logo-circle {
+  border: 1.8px solid black;
+  width: 70px; /* Default for desktop */
+  height: 70px; /* Default for desktop */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background: white;
+  user-select: none;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* atau space-evenly */
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+nav button {
+  border: 1px solid black;
+  background: white;
+  padding: 0.5rem 0.2rem; /* Gunakan padding yang sama di kanan/kiri */
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  transition: background-color 0.25s ease;
+  font-size: 1rem;
+  text-align: center; /* Pastikan text selalu di tengah */
+  white-space: nowrap; /* Hindari text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Jika text terlalu panjang */
+  min-width: 0; /* Memastikan grid item bisa mengecil */
+}
+
+nav button:hover {
+  background-color: #c5d5dc;
+}
+
+.form-container {
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  align-items: center;
+}
+
+label {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1rem; /* Default for desktop */
+}
+
+input[type="number"],
+input[readonly] {
+  flex: 1;
+  padding: 0.35rem 0.5rem;
+  margin-left: 0.8rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1rem; /* Default for desktop */
+  font-family: inherit;
+}
+
+input[readonly] {
+  background: #ececec;
+  cursor: not-allowed;
+}
+
+button#hitung {
+  border: 1.5px solid black;
+  background: white;
+  font-weight: 700;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 0.8rem;
+  user-select: none;
+  transition: background-color 0.25s ease;
+  font-size: 1rem; /* Default for desktop */
+}
+
+button#hitung:hover {
+  background-color: #c5d5dc;
+}
+
+footer {
+  border: 1px solid black;
+  text-align: center;
+  padding: 0.4rem 0;
+  border-radius: 5px;
+  user-select: none;
+  background: #eef3f6;
+  font-size: 0.9rem; /* Default for desktop */
+  font-weight: 600;
+}
+
+/* --- Media Queries for Mobile Devices (max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .container {
+    margin: 1rem; /* Smaller margin for mobile */
+    padding: 0.8rem;
+    max-width: 95%; /* Adjust max-width for smaller screens */
+  }
+
+  .header {
+    grid-template-columns: 1fr; /* Stack title and logo on mobile */
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .judul-website {
+    font-size: 1.2rem; /* Smaller font size for mobile title */
+    padding: 0.3rem 0.5rem;
+  }
+
+  .logo-circle {
+    width: 60px; /* Smaller logo for mobile */
+    height: 60px;
+    margin: 0 auto; /* Center logo when stacked */
+  }
+
+  nav {
+    grid-template-columns: 1fr; /* Stack navigation buttons on mobile */
+    gap: 5px;
+  }
+
+  nav button {
+    padding: 0.4rem 0;
+    font-size: 0.9rem; /* Smaller font size for nav buttons */
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack label and input on mobile */
+    align-items: flex-start; /* Align items to the start */
+    margin-bottom: 0.8rem;
+  }
+
+  label {
+    margin-bottom: 0.3rem; /* Space between label and input */
+    font-size: 0.95rem;
+  }
+
+  input[type="number"],
+  input[readonly] {
+    width: calc(100% - 1rem); /* Full width minus padding */
+    margin-left: 0; /* Remove left margin */
+    padding: 0.4rem 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  button#hitung {
+    width: 100%; /* Full width button */
+    margin-left: 0;
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.8rem; /* Smaller font size for footer */
+    padding: 0.3rem 0;
+  }
+}
+
+/* --- Media Queries for Larger Screens (optional, if needed for very large displays) --- */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 800px; /* Wider container for very large screens */
+  }
+}
